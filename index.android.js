@@ -5,6 +5,7 @@ import {
   Text,
   ListView,
   Image,
+  TouchableHighlight,
   View
 } from 'react-native';
 
@@ -32,6 +33,10 @@ class workingWithLists extends Component {
     };
   }
 
+  onClickList(){
+    alert('You have clicked')
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -39,10 +44,12 @@ class workingWithLists extends Component {
           <ListView
             dataSource={this.state.dataSource}
             renderRow={(rowData) =>
+              <TouchableHighlight underlayColor='white' onPress={this.onClickList}>
               <View>
                 <Text>My Awesome Row</Text>
                 <Text style={styles.textComponent}>{rowData}</Text>
               </View>
+              </TouchableHighlight>
             }
           />
         </View>
