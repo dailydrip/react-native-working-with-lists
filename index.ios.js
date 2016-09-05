@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   ListView,
+  Image,
   View
 } from 'react-native';
 
@@ -37,7 +38,12 @@ class workingWithLists extends Component {
         <View>
           <ListView
             dataSource={this.state.dataSource}
-            renderRow={(rowData) => <Text style={styles.textComponent}>{rowData}</Text>}
+            renderRow={(rowData) =>
+              <View>
+                <Text>My Awesome Row</Text>
+                <Text style={styles.textComponent}>{rowData}</Text>
+              </View>
+            }
           />
         </View>
       </View>
