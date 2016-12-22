@@ -15,6 +15,8 @@
 # Ignore BUCK generated dirs
 <PROJECT_ROOT>/\.buckd/
 
+.*/node_modules/react-native/.*
+
 # Ignore unexpected extra @providesModule
 .*/node_modules/commoner/test/source/widget/share.js
 
@@ -55,4 +57,4 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 unsafe.enable_getters_and_setters=true
 
 [version]
-^0.30.0
+^0.37.4
